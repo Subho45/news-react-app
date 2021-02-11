@@ -41,7 +41,6 @@ const TopNews = () => {
         "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
-        console.log(response.data.articles);
         setSidebarNewsDetail(response.data.articles);
       });
   }, []);
