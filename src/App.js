@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import TopNews from "./TopNews";
 const App = () => {
   return (
@@ -8,6 +8,9 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/" component={TopNews} />
+        <Route path="/technology" component={TopNews} />
+        <Route path="/bussiness" component={TopNews} />
+        <Redirect to="/" />
       </Switch>
     </>
   );
