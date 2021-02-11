@@ -1,0 +1,15 @@
+.sidebar__detail {
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px solid #cccccc;
+}
+.sidebar__detail__img {
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+  border: 1px solid;
+}
+.sidebar__detail__heading {
+  font-size: 1rem;
+  margin-left: 20px;
+}

@@ -1,0 +1,33 @@
+.weather__section {
+  width: 30%;
+  border: 2px solid;
+}
+.weather__heading {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.3rem;
+  background-color: #000;
+  color: #fff;
+}
+.weather__detail__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0 30px 30px;
+}
+.weather__detail p:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.weather__detail p:nth-child(2) {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 20px 0 35px;
+}
+.weather__detail p:nth-child(3) {
+  font-size: 1rem;
+}
+.weather__detail__section img {
+  width: 80px;
+}
