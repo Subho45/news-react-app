@@ -7,7 +7,7 @@ const App = () => {
     <>
       <Header />
       <Switch>
-        <Route path="/" component={TopNews} />
+        <Route exact path="/" component={TopNews} />
         <Route path="/technology" component={TopNews} />
         <Route path="/bussiness" component={TopNews} />
         <Redirect to="/" />
