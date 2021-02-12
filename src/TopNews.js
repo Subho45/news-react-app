@@ -82,7 +82,7 @@ const TopNews = () => {
 
       {/* news section */}
       <div className="news__section">
-        <h1 className="news__section__heading">Today's Top New</h1>
+        <h1 className="news__section__heading">Today's Top Newsssss</h1>
       </div>
     </div>
   );
