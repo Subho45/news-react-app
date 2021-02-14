@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SearchIcon from "@material-ui/icons/Search";
 import "./Header.css";
 const Header = () => {
   return (
@@ -14,7 +13,7 @@ const Header = () => {
           type="text"
           className="search__input"
         />
-        <SearchIcon className="search__icon" />
+        <button className="search__icon">Search</button>
       </div>
       <ul className="nav__list">
         <li className="nav__item">

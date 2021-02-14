@@ -4,7 +4,6 @@
   justify-content: space-between;
   width: 100%;
   padding: 40px 50px;
-  background-color: #f6f6f6;
 }
 .logo {
   font-family: "Playfair Display", serif;
@@ -20,12 +19,13 @@
   flex: 1;
 }
 .search__input {
-  height: 30px;
+  height: 46px;
   padding: 15px;
   width: 100%;
   font-size: 1rem;
-  border: 2px #000 solid;
   outline: none !important;
+  background-color: #eeeeee;
+  border: none;
 }
 .search__input::placeholder {
   font-size: 0.9rem;
@@ -33,11 +33,11 @@
 .search__icon {
   background-color: #000;
   color: #fff;
-  width: 35px !important;
-  height: 34px !important;
-  padding: 5px;
-  font-size: 1.5rem;
+  padding: 12px 20px;
+  font-size: 1rem;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 .nav__list {
   display: flex;
