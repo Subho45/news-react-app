@@ -31,13 +31,17 @@
   font-size: 0.9rem;
 }
 .search__icon {
-  background-color: #000;
+  background-color: #d82650;
   color: #fff;
   padding: 12px 20px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
   outline: none;
+  transition: 0.3s;
+}
+.search__icon:hover {
+  background-color: #000;
 }
 .nav__list {
   display: flex;

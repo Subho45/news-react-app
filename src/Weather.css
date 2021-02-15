@@ -1,12 +1,11 @@
 .weather__section {
   width: 35%;
-  border: 2px solid;
 }
 .weather__heading {
   text-align: center;
   padding: 10px;
   font-size: 1.3rem;
-  background-color: #000;
+  background-color: #d82650;
   color: #fff;
 }
 .weather__detail__section {
@@ -23,7 +22,7 @@
 .weather__detail p:nth-child(2) {
   font-size: 1.7rem;
   font-weight: bold;
-  margin: 20px 0 35px;
+  margin: 20px 0 40px;
 }
 .weather__detail p:nth-child(3) {
   font-size: 1rem;
