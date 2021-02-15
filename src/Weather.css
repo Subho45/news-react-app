@@ -22,7 +22,7 @@
 .weather__detail p:nth-child(2) {
   font-size: 1.7rem;
   font-weight: bold;
-  margin: 20px 0 40px;
+  margin: 30px 0 40px;
 }
 .weather__detail p:nth-child(3) {
   font-size: 1rem;

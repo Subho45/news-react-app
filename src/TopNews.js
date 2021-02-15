@@ -6,6 +6,8 @@ import axios from "axios";
 import "./topNews.css";
 import Weather from "./Weather";
 import SidebarNews from "./SidebarNews";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 const TopNews = () => {
   // sidebar news detail
   const [sidebarNewsDetail, setSidebarNewsDetail] = useState([]);
@@ -17,6 +19,9 @@ const TopNews = () => {
     description: "",
     icon: "",
   });
+
+  // carousel news detail
+  const [carouselNewsDetail, setCarouselNewsDetail] = useState([]);
 
   // weather data fetch
   useEffect(() => {
@@ -45,7 +50,7 @@ const TopNews = () => {
       });
   }, []);
 
-  //sidebar news card making
+  // sidebar news card making
   const allSidebarNews = sidebarNewsDetail.map((eachNews, eachNewsIndex) => {
     return (
       <SidebarNews
@@ -53,6 +58,28 @@ const TopNews = () => {
         bbcHeading={eachNews.title}
         key={eachNewsIndex}
       />
+    );
+  });
+
+  // carousel news data fetch
+  useEffect(() => {
+    axios
+      .get(
+        "http://newsapi.org/v2/top-headlines?country=us&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+      )
+      .then((response) => {
+        const carouselData = response.data.articles.slice(0, 5);
+        setCarouselNewsDetail(carouselData);
+      });
+  }, []);
+
+  // carousel making
+  const allCarouselNews = carouselNewsDetail.map((eachNews, eachNewsIndex) => {
+    return (
+      <SplideSlide className="carousel__detail" key={eachNewsIndex}>
+        <img src={eachNews.urlToImage} alt="" />
+        <h1>{eachNews.title}</h1>
+      </SplideSlide>
     );
   });
 
@@ -80,10 +107,13 @@ const TopNews = () => {
         />
       </div>
 
-      {/* news section */}
+      {/* top news section */}
       <div className="news__section">
         <h1 className="news__section__heading">Today's Top News</h1>
       </div>
+
+      {/* top news carousel */}
+      <Splide className="carousel">{allCarouselNews}</Splide>
     </div>
   );
 };
