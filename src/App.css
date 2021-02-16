@@ -9,7 +9,7 @@
 /* news section */
 .news__section {
   width: 90%;
-  margin: 10% auto 6%;
+  margin: 8% auto 0;
 }
 .news__section__heading {
   font-size: 2.3rem;
@@ -19,4 +19,12 @@
   padding: 10px;
   border-top: 2px solid;
   border-bottom: 2px solid;
+}
+
+/* main news section */
+.main__news__section {
+  margin: 7% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

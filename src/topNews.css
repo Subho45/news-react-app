@@ -19,8 +19,8 @@
 
 /* carousel */
 .carousel {
-  width: 70%;
-  margin: 0 auto;
+  width: 75%;
+  margin: 80px auto;
   position: relative;
   height: 250px;
 }
@@ -32,10 +32,10 @@
 }
 .carousel__detail > .carousel__link > h1 {
   position: absolute;
-  bottom: 15%;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
   width: 70%;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }

@@ -35,15 +35,15 @@ const TopNews = () => {
   const [topNews, setTopNews] = useState([]);
 
   // sidebar news data fetch
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
-  //     )
-  //     .then((response) => {
-  //       setSidebarNewsDetail(response.data.articles);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(
+        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+      )
+      .then((response) => {
+        setSidebarNewsDetail(response.data.articles);
+      });
+  }, []);
 
   // sidebar news card making
   const allSidebarNews = sidebarNewsDetail.map((eachNews, eachNewsIndex) => {
@@ -73,16 +73,16 @@ const TopNews = () => {
   }, []);
 
   // carousel news data fetch
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "http://newsapi.org/v2/top-headlines?country=us&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
-  //     )
-  //     .then((response) => {
-  //       const carouselData = response.data.articles.slice(0, 5);
-  //       setCarouselNewsDetail(carouselData);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(
+        "http://newsapi.org/v2/top-headlines?country=us&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+      )
+      .then((response) => {
+        const carouselData = response.data.articles.slice(0, 5);
+        setCarouselNewsDetail(carouselData);
+      });
+  }, []);
 
   // carousel making
   const allCarouselNews = carouselNewsDetail.map((eachNews, eachNewsIndex) => {
@@ -148,7 +148,7 @@ const TopNews = () => {
         <Splide className="carousel">{allCarouselNews}</Splide>
 
         {/* top news */}
-        <div className="top__news">{allTopNews}</div>
+        <div className="main__news__section">{allTopNews}</div>
       </div>
     </div>
   );

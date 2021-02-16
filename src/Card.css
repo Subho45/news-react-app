@@ -1,0 +1,15 @@
+.news__card {
+  width: 40%;
+  margin: 40px 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.news__card > img {
+  width: 100%;
+  transition: 0.3s;
+}
+.news__card > .news__detail > h1 {
+  font-size: 1.7rem;
+  margin: 20px 0 25px;
+  font-family: "Playfair Display", serif;
+}
