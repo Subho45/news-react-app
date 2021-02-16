@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
 import SidebarNews from "./SidebarNews";
 import Weather from "./Weather";
+import Card from "./Card";
 
 // css
 import "./topNews.css";
@@ -107,7 +108,15 @@ const TopNews = () => {
   }, []);
 
   // top news card making
-  const allTopNews = topNews.map((eachNews, eachNewsIndex) => {});
+  const allTopNews = topNews.map((eachNews, eachNewsIndex) => {
+    return (
+      <Card
+        topImg={eachNews.urlToImage}
+        topHeading={eachNews.title}
+        topDetail={eachNews.description}
+      />
+    );
+  });
 
   return (
     <div className="section__width">
@@ -116,7 +125,6 @@ const TopNews = () => {
         bannerHeading="Welcome to TechNew's Top News section."
         bannerImg={topBannerImg}
       />
-
       <div className="sidebar__weather__section">
         {/* sidebar news */}
         <div className="sidebar__news">
@@ -132,16 +140,16 @@ const TopNews = () => {
           icon={weatherDetail.icon}
         />
       </div>
-
       {/* top news section */}
       <div className="news__section">
         <h1 className="news__section__heading">Today's Top News</h1>
+
+        {/* carousel */}
+        <Splide className="carousel">{allCarouselNews}</Splide>
+
+        {/* top news */}
+        <div className="top__news">{allTopNews}</div>
       </div>
-
-      {/* top news carousel */}
-      <Splide className="carousel">{allCarouselNews}</Splide>
-
-      {/* top news main section */}
     </div>
   );
 };
