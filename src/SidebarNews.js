@@ -1,5 +1,6 @@
 import React from "react";
 import "./SidebarNews.css";
+
 const SidebarNews = (props) => {
   return (
     <div className="sidebar__detail">

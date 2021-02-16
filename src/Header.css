@@ -1,3 +1,4 @@
+/* navbar */
 .header {
   display: flex;
   align-items: center;
@@ -13,6 +14,8 @@
   font-weight: bold;
   margin-right: 50px;
 }
+
+/* serchbar */
 .search__bar {
   display: flex;
   align-items: center;
@@ -43,6 +46,8 @@
 .search__icon:hover {
   background-color: #000;
 }
+
+/* nav links */
 .nav__list {
   display: flex;
 }

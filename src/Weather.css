@@ -1,3 +1,4 @@
+/* weather section */
 .weather__section {
   width: 35%;
 }
@@ -8,6 +9,8 @@
   background-color: #d82650;
   color: #fff;
 }
+
+/* weather detail */
 .weather__detail__section {
   display: flex;
   align-items: center;

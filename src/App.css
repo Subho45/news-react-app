@@ -1,14 +1,16 @@
+/* section */
 .section__width {
   width: 100%;
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* news section */
 .news__section {
   width: 90%;
   margin: 10% auto 6%;
 }
-
 .news__section__heading {
   font-size: 2.3rem;
   word-spacing: 5px;

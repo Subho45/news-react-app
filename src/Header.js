@@ -1,12 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+
 const Header = () => {
   return (
+    // navbar
     <div className="header">
+      {/* logo */}
       <NavLink className="logo" to="/">
         TechNews
       </NavLink>
+
+      {/* searchbar */}
       <div className="search__bar">
         <input
           placeholder="Search news"
@@ -15,6 +20,8 @@ const Header = () => {
         />
         <button className="search__icon">Search</button>
       </div>
+
+      {/* nav links */}
       <ul className="nav__list">
         <li className="nav__item">
           <NavLink

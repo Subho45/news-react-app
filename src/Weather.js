@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+
 const Weather = (props) => {
   return (
     <div className="weather__section">
