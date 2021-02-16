@@ -20,7 +20,7 @@
 /* carousel */
 .carousel {
   width: 75%;
-  margin: 80px auto;
+  margin: 70px auto 100px;
   position: relative;
   height: 250px;
 }

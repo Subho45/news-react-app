@@ -9,7 +9,7 @@
 /* news section */
 .news__section {
   width: 90%;
-  margin: 8% auto 0;
+  margin: 8% auto;
 }
 .news__section__heading {
   font-size: 2.3rem;
@@ -23,7 +23,6 @@
 
 /* main news section */
 .main__news__section {
-  margin: 7% 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
