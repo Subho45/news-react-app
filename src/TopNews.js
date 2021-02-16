@@ -70,7 +70,6 @@ const TopNews = () => {
       .then((response) => {
         const carouselData = response.data.articles.slice(0, 5);
         setCarouselNewsDetail(carouselData);
-        console.log(carouselData);
       });
   }, []);
 
