@@ -70,6 +70,7 @@ const TopNews = () => {
       .then((response) => {
         const carouselData = response.data.articles.slice(0, 5);
         setCarouselNewsDetail(carouselData);
+        console.log(carouselData);
       });
   }, []);
 
@@ -77,8 +78,10 @@ const TopNews = () => {
   const allCarouselNews = carouselNewsDetail.map((eachNews, eachNewsIndex) => {
     return (
       <SplideSlide className="carousel__detail" key={eachNewsIndex}>
-        <img src={eachNews.urlToImage} alt="" />
-        <h1>{eachNews.title}</h1>
+        <a className="carousel__link" href={eachNews.url}>
+          <img style={{ cursor: "pointer" }} src={eachNews.urlToImage} alt="" />
+          <h1 style={{ cursor: "pointer" }}>{eachNews.title}</h1>
+        </a>
       </SplideSlide>
     );
   });

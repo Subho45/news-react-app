@@ -18,20 +18,26 @@
 
 /* carousel */
 .carousel {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
-  height: 400px;
+  height: 250px;
+  margin-bottom: 200px;
 }
-.carousel__detail > img {
+.carousel__detail {
   width: 100%;
-  height: 400px;
 }
-.carousel__detail > h1 {
+.carousel__detail > .carousel__link > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.carousel__detail > .carousel__link > h1 {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  width: 80%;
+  width: 70%;
+  font-size: 1.7rem;
 }
