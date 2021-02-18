@@ -114,6 +114,7 @@ const TopNews = () => {
         topImg={eachNews.urlToImage}
         topHeading={eachNews.title}
         topDetail={eachNews.description}
+        key={eachNewsIndex}
       />
     );
   });
