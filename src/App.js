@@ -2,8 +2,11 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // component
-import Header from "./Header";
-import TopNews from "./TopNews";
+import Header from "./component/Header";
+import TopNews from "./component/TopNews";
+
+// css
+import "./css/App.css";
 
 const App = () => {
   return (
@@ -21,4 +24,5 @@ const App = () => {
     </>
   );
 };
+
 export default App;

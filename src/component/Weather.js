@@ -1,5 +1,7 @@
 import React from "react";
-import "./Weather.css";
+
+// css
+import "../css/Weather.css";
 
 const Weather = (props) => {
   return (
@@ -16,4 +18,5 @@ const Weather = (props) => {
     </div>
   );
 };
+
 export default Weather;

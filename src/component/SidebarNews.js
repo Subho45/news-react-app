@@ -1,5 +1,7 @@
 import React from "react";
-import "./SidebarNews.css";
+
+// css
+import "../css/SidebarNews.css";
 
 const SidebarNews = (props) => {
   return (
@@ -9,4 +11,5 @@ const SidebarNews = (props) => {
     </div>
   );
 };
+
 export default SidebarNews;

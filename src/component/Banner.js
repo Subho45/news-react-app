@@ -1,5 +1,7 @@
 import React from "react";
-import "./banner.css";
+
+// css
+import "../css/Banner.css";
 
 const Banner = (props) => {
   return (
@@ -9,4 +11,5 @@ const Banner = (props) => {
     </div>
   );
 };
+
 export default Banner;

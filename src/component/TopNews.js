@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 // component
-import Banner from "./Banner";
-import SidebarNews from "./SidebarNews";
-import Weather from "./Weather";
-import Card from "./Card";
+import Banner from "../component/Banner";
+import SidebarNews from "../component/SidebarNews";
+import Weather from "../component/Weather";
+import Card from "../component/Card";
 
 // css
-import "./topNews.css";
-import "./App.css";
+import "../css/TopNews.css";
+import "../css/App.css";
+
+// image
+import topBannerImg from "../image/topBanner.svg";
 
 // others
-import topBannerImg from "./image/topBanner.svg";
 import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
@@ -154,4 +156,5 @@ const TopNews = () => {
     </div>
   );
 };
+
 export default TopNews;
