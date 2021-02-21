@@ -13,6 +13,11 @@ import "../css/App.css";
 // image
 import topBannerImg from "../image/topBanner.svg";
 
+// icon
+import FacebookIcon from "@material-ui/icons/Facebook";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+
 // others
 import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -122,38 +127,56 @@ const TopNews = () => {
   });
 
   return (
-    <div className="section__width">
-      {/* top banner */}
-      <Banner
-        bannerHeading="Welcome to TechNew's Top News section."
-        bannerImg={topBannerImg}
-      />
-      <div className="sidebar__weather__section">
-        {/* sidebar news */}
-        <div className="sidebar__news">
-          <h1 className="sidebar__news__heading">BBC Shorts:</h1>
-          {allSidebarNews}
-        </div>
-
-        {/* weather banner */}
-        <Weather
-          name={weatherDetail.name}
-          temp={weatherDetail.temp}
-          description={weatherDetail.description}
-          icon={weatherDetail.icon}
+    <>
+      <div className="section__width">
+        {/* top banner */}
+        <Banner
+          bannerHeading="Welcome to TechNew's Top News section."
+          bannerImg={topBannerImg}
         />
-      </div>
-      {/* top news section */}
-      <div className="news__section">
-        <h1 className="news__section__heading">Today's Top News</h1>
+        <div className="sidebar__weather__section">
+          {/* sidebar news */}
+          <div className="sidebar__news">
+            <h1 className="sidebar__news__heading">BBC Shorts:</h1>
+            {allSidebarNews}
+          </div>
 
-        {/* carousel */}
-        <Splide className="carousel">{allCarouselNews}</Splide>
+          {/* weather banner */}
+          <Weather
+            name={weatherDetail.name}
+            temp={weatherDetail.temp}
+            description={weatherDetail.description}
+            icon={weatherDetail.icon}
+          />
+        </div>
+        {/* top news section */}
+        <div className="news__section">
+          <h1 className="news__section__heading">Today's Top News</h1>
 
-        {/* top news */}
-        <div className="main__news__section">{allTopNews}</div>
+          {/* carousel */}
+          <Splide className="carousel">{allCarouselNews}</Splide>
+
+          {/* top news */}
+          <div className="main__news__section">{allTopNews}</div>
+        </div>
       </div>
-    </div>
+
+      {/* footer */}
+      <div className="footer">
+        <div className="social__media__link">
+          <a href="https://www.facebook.com/profile.php?id=100008004977942">
+            <FacebookIcon fontSize="small" />
+          </a>
+          <a href="https://twitter.com/debojyotibabai1">
+            <TwitterIcon fontSize="small" />
+          </a>
+          <a href="https://www.linkedin.com/in/debojyoti-ghosh-7003671a4/">
+            <LinkedInIcon fontSize="small" />
+          </a>
+        </div>
+        <p>© Copyright TechNews | All Rights Reserved.</p>
+      </div>
+    </>
   );
 };
 

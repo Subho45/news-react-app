@@ -1,3 +1,7 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+#FFA2B9 */
+
 /* import font style */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap");
 
@@ -7,10 +11,6 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Playfair Display', serif;
-#FFA2B9 */
 
 /* section */
 .section__width {
@@ -23,7 +23,7 @@ font-family: 'Playfair Display', serif;
 /* news section */
 .news__section {
   width: 90%;
-  margin: 8% auto;
+  margin: 8% auto 15%;
 }
 .news__section__heading {
   font-size: 2.3rem;
@@ -40,4 +40,25 @@ font-family: 'Playfair Display', serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 50px 0 30px;
+  background-color: #eeeeee;
+}
+.footer > .social__media__link > a {
+  margin: 0 15px;
+  color: #000;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.footer > .social__media__link > a:hover {
+  opacity: 1;
+}
+.footer > p {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  margin-top: 30px;
 }
