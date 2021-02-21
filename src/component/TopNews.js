@@ -145,7 +145,7 @@ const TopNews = () => {
       </div>
       {/* top news section */}
       <div className="news__section">
-        <h1 className="news__section__heading">Today's Top News</h1>
+        <h1 className="news__section__heading">Today's Top Newsss</h1>
 
         {/* carousel */}
         <Splide className="carousel">{allCarouselNews}</Splide>
