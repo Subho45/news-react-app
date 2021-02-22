@@ -46,7 +46,7 @@ const TechnologyNews = () => {
       <div className="section__width">
         {/* business banner */}
         <Banner
-          bannerHeading="Welcome to TechNew's Technology News section."
+          bannerHeading="Welcome to TechNew's Technology section."
           bannerImg={technologyBannerImg}
         />
 

@@ -127,7 +127,7 @@ const TopNews = () => {
       <div className="section__width">
         {/* top banner */}
         <Banner
-          bannerHeading="Welcome to TechNew's Top News section."
+          bannerHeading="Welcome to TechNew's Top section."
           bannerImg={topBannerImg}
         />
         <div className="sidebar__weather__section">
