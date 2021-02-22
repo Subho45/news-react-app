@@ -118,9 +118,9 @@ const TopNews = () => {
   const allTopNews = topNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
-        topImg={eachNews.urlToImage}
-        topHeading={eachNews.title}
-        topDetail={eachNews.description}
+        img={eachNews.urlToImage}
+        heading={eachNews.title}
+        detail={eachNews.description}
         key={eachNewsIndex}
       />
     );

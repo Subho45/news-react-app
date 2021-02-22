@@ -8,7 +8,7 @@ import Card from "./Card";
 import "../css/App.css";
 
 // image
-import technologyBannerImg from "../image/technologyBanner.svg";
+import businessBannerImg from "../image/businessBanner.svg";
 
 // icon
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -18,23 +18,23 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 // others
 import axios from "axios";
 
-const TechnologyNews = () => {
-  // technology news detail
-  const [technologyNews, setTechnologyNews] = useState([]);
+const BusinessNews = () => {
+  // business news detail
+  const [businessNews, setBusinessNews] = useState([]);
 
-  // technology news data fetch
+  // business news data fetch
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
-        setTechnologyNews(response.data.articles);
+        setBusinessNews(response.data.articles);
       });
   }, []);
 
-  // technology news card making
-  const allTechnologyNews = technologyNews.map((eachNews, eachNewsIndex) => {
+  // business news card making
+  const allBusinessNews = businessNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
         img={eachNews.urlToImage}
@@ -50,16 +50,16 @@ const TechnologyNews = () => {
       <div className="section__width">
         {/* business banner */}
         <Banner
-          bannerHeading="Welcome to TechNew's Technology News section."
-          bannerImg={technologyBannerImg}
+          bannerHeading="Welcome to TechNew's Business News section."
+          bannerImg={businessBannerImg}
         />
 
-        {/* technology news section */}
+        {/* business news section */}
         <div className="news__section">
-          <h1 className="news__section__heading">Today's Technology News</h1>
+          <h1 className="news__section__heading">Today's Business News</h1>
 
-          {/* technology news */}
-          <div className="main__news__section">{allTechnologyNews}</div>
+          {/* business news */}
+          <div className="main__news__section">{allBusinessNews}</div>
         </div>
       </div>
 
@@ -82,4 +82,4 @@ const TechnologyNews = () => {
   );
 };
 
-export default TechnologyNews;
+export default BusinessNews;
