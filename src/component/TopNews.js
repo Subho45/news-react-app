@@ -18,6 +18,7 @@ import topBannerImg from "../image/topBanner.svg";
 import axios from "axios";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import Modal from "react-modal";
 
 const TopNews = () => {
   // sidebar news detail
