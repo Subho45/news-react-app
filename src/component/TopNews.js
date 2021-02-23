@@ -145,6 +145,7 @@ const TopNews = () => {
             icon={weatherDetail.icon}
           />
         </div>
+
         {/* top news section */}
         <div className="news__section">
           <h1 className="news__section__heading">Today's Top News</h1>
