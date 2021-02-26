@@ -37,6 +37,9 @@ const TopNews = () => {
   // top news detail
   const [topNews, setTopNews] = useState([]);
 
+  // full news value
+  const [value, setValue] = useState(false);
+
   // sidebar news data fetch
   useEffect(() => {
     axios
