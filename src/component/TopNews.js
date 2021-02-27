@@ -91,10 +91,10 @@ const TopNews = () => {
   const allCarouselNews = carouselNewsDetail.map((eachNews, eachNewsIndex) => {
     return (
       <SplideSlide className="carousel__detail" key={eachNewsIndex}>
-        <a className="carousel__link" href={eachNews.url}>
-          <img style={{ cursor: "pointer" }} src={eachNews.urlToImage} alt="" />
-          <h1 style={{ cursor: "pointer" }}>{eachNews.title}</h1>
-        </a>
+        <div className="carousel__link">
+          <img src={eachNews.urlToImage} alt="" />
+          <h1>{eachNews.title}</h1>
+        </div>
       </SplideSlide>
     );
   });
@@ -114,6 +114,7 @@ const TopNews = () => {
   const allTopNews = topNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
+        link={eachNews.url}
         img={eachNews.urlToImage}
         heading={eachNews.title}
         detail={eachNews.description}

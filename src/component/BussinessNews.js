@@ -33,6 +33,7 @@ const BusinessNews = () => {
   const allBusinessNews = businessNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
+        link={eachNews.url}
         img={eachNews.urlToImage}
         heading={eachNews.title}
         detail={eachNews.description}

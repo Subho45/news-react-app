@@ -33,6 +33,7 @@ const TechnologyNews = () => {
   const allTechnologyNews = technologyNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
+        link={eachNews.url}
         img={eachNews.urlToImage}
         heading={eachNews.title}
         detail={eachNews.description}

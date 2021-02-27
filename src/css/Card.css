@@ -3,6 +3,8 @@
   margin: 50px 0;
   overflow: hidden;
   cursor: pointer;
+  color: #000;
+  text-decoration: none;
 }
 .news__card > img {
   width: 100%;
