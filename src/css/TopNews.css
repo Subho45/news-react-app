@@ -22,7 +22,6 @@
   margin: 80px auto;
   position: relative;
   height: 250px;
-  z-index: -1;
 }
 .carousel__detail > .carousel__link > img {
   width: 100%;
