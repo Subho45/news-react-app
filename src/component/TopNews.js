@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Modal from "react-modal";
 
 // component
 import Banner from "../component/Banner";
@@ -20,6 +21,21 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 const TopNews = () => {
+  // test purpose
+  const [isOpen, setIsOpen] = useState(false);
+
+  const fullNewsHandler = (index) => {
+    setIsOpen(!isOpen);
+    axios
+      .get(
+        "http://newsapi.org/v2/top-headlines?country=in&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+      )
+      .then((response) => {
+        const fullNewsData = response.data.articles.slice(index, index + 1);
+        console.log(fullNewsData);
+      });
+  };
+
   // sidebar news detail
   const [sidebarNewsDetail, setSidebarNewsDetail] = useState([]);
 
@@ -114,6 +130,7 @@ const TopNews = () => {
   const allTopNews = topNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
+        fullNews={fullNewsHandler.bind(this, eachNewsIndex)}
         img={eachNews.urlToImage}
         heading={eachNews.title}
         detail={eachNews.description}
@@ -156,6 +173,16 @@ const TopNews = () => {
           {/* top news */}
           <div className="main__news__section">{allTopNews}</div>
         </div>
+
+        {/* test purpose */}
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          <h1>ok</h1>
+        </Modal>
       </div>
 
       {/* footer */}
