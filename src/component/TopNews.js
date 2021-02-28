@@ -127,7 +127,6 @@ const TopNews = () => {
 
   // full news handler functionality
   const fullNewsHandler = (index) => {
-    setIsOpen(!isOpen);
     axios
       .get(
         "http://newsapi.org/v2/top-headlines?country=in&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
@@ -137,6 +136,7 @@ const TopNews = () => {
         console.log(fullNewsData);
         setFullNews(fullNewsData);
       });
+    setIsOpen(!isOpen);
   };
 
   // top news card making

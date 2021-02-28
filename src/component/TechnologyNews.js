@@ -46,7 +46,6 @@ const TechnologyNews = () => {
 
   // full news handler functionality
   const fullNewsHandler = (index) => {
-    setIsOpen(!isOpen);
     axios
       .get(
         "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
@@ -56,6 +55,7 @@ const TechnologyNews = () => {
         console.log(fullNewsData);
         setFullNews(fullNewsData);
       });
+    setIsOpen(!isOpen);
   };
 
   // technology news card making

@@ -46,7 +46,6 @@ const BusinessNews = () => {
 
   // full news handler functionality
   const fullNewsHandler = (index) => {
-    setIsOpen(!isOpen);
     axios
       .get(
         "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
@@ -56,6 +55,7 @@ const BusinessNews = () => {
         console.log(fullNewsData);
         setFullNews(fullNewsData);
       });
+    setIsOpen(!isOpen);
   };
 
   // business news card making
