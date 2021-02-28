@@ -21,21 +21,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 const TopNews = () => {
-  // test purpose
-  const [isOpen, setIsOpen] = useState(false);
-
-  const fullNewsHandler = (index) => {
-    setIsOpen(!isOpen);
-    axios
-      .get(
-        "http://newsapi.org/v2/top-headlines?country=in&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
-      )
-      .then((response) => {
-        const fullNewsData = response.data.articles.slice(index, index + 1);
-        console.log(fullNewsData);
-      });
-  };
-
   // sidebar news detail
   const [sidebarNewsDetail, setSidebarNewsDetail] = useState([]);
 
@@ -52,6 +37,20 @@ const TopNews = () => {
 
   // top news detail
   const [topNews, setTopNews] = useState([]);
+
+  // full news is open or not value
+  const [isOpen, setIsOpen] = useState(false);
+
+  // full news detail
+  const [fullNews, setFullNews] = useState([
+    {
+      urlToImage: "",
+      title: "",
+      description: "",
+      author: "",
+      publishedAt: "",
+    },
+  ]);
 
   // sidebar news data fetch
   useEffect(() => {
@@ -126,6 +125,20 @@ const TopNews = () => {
       });
   }, []);
 
+  // full news handler functionality
+  const fullNewsHandler = (index) => {
+    setIsOpen(!isOpen);
+    axios
+      .get(
+        "http://newsapi.org/v2/top-headlines?country=in&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+      )
+      .then((response) => {
+        const fullNewsData = response.data.articles.slice(index, index + 1);
+        console.log(fullNewsData);
+        setFullNews(fullNewsData);
+      });
+  };
+
   // top news card making
   const allTopNews = topNews.map((eachNews, eachNewsIndex) => {
     return (
@@ -133,7 +146,6 @@ const TopNews = () => {
         fullNews={fullNewsHandler.bind(this, eachNewsIndex)}
         img={eachNews.urlToImage}
         heading={eachNews.title}
-        detail={eachNews.description}
         key={eachNewsIndex}
       />
     );
@@ -174,14 +186,45 @@ const TopNews = () => {
           <div className="main__news__section">{allTopNews}</div>
         </div>
 
-        {/* test purpose */}
+        {/* full news modal */}
         <Modal
+          style={{
+            content: {
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              padding: "50px",
+              width: "70%",
+              height: "90%",
+            },
+          }}
           isOpen={isOpen}
           onRequestClose={() => {
             setIsOpen(!isOpen);
           }}
         >
-          <h1>ok</h1>
+          <h1>{fullNews[0].title}</h1>
+          <img
+            src={fullNews[0].urlToImage}
+            alt=""
+            style={{ width: "100%", margin: "40px 0" }}
+          />
+          <p style={{ fontSize: "1.1rem" }}>{fullNews[0].description}</p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginTop: "70px",
+            }}
+          >
+            <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
+              {fullNews[0].publishedAt}
+            </p>
+            <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
+              ~ {fullNews[0].author}
+            </p>
+          </div>
         </Modal>
       </div>
 

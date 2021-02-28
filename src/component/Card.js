@@ -9,7 +9,6 @@ const Card = (props) => {
       <img className="news__img" src={props.img} alt="" />
       <div className="news__detail">
         <h1>{props.heading}</h1>
-        <p>{props.detail}</p>
       </div>
     </div>
   );

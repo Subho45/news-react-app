@@ -9,7 +9,7 @@
   transition: 0.3s;
 }
 .news__card > .news__detail > h1 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: 20px 0 25px;
   font-family: "Playfair Display", serif;
 }

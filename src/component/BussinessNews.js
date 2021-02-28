@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Modal from "react-modal";
 
 // component
 import Banner from "./Banner";
@@ -18,6 +19,20 @@ const BusinessNews = () => {
   // business news detail
   const [businessNews, setBusinessNews] = useState([]);
 
+  // full news is open or not value
+  const [isOpen, setIsOpen] = useState(false);
+
+  // full news detail
+  const [fullNews, setFullNews] = useState([
+    {
+      urlToImage: "",
+      title: "",
+      description: "",
+      author: "",
+      publishedAt: "",
+    },
+  ]);
+
   // business news data fetch
   useEffect(() => {
     axios
@@ -29,14 +44,27 @@ const BusinessNews = () => {
       });
   }, []);
 
+  // full news handler functionality
+  const fullNewsHandler = (index) => {
+    setIsOpen(!isOpen);
+    axios
+      .get(
+        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+      )
+      .then((response) => {
+        const fullNewsData = response.data.articles.slice(index, index + 1);
+        console.log(fullNewsData);
+        setFullNews(fullNewsData);
+      });
+  };
+
   // business news card making
   const allBusinessNews = businessNews.map((eachNews, eachNewsIndex) => {
     return (
       <Card
-        link={eachNews.url}
+        fullNews={fullNewsHandler.bind(this, eachNewsIndex)}
         img={eachNews.urlToImage}
         heading={eachNews.title}
-        detail={eachNews.description}
         key={eachNewsIndex}
       />
     );
@@ -58,6 +86,47 @@ const BusinessNews = () => {
           {/* business news */}
           <div className="main__news__section">{allBusinessNews}</div>
         </div>
+
+        {/* full news modal */}
+        <Modal
+          style={{
+            content: {
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%,-50%)",
+              padding: "50px",
+              width: "70%",
+              height: "90%",
+            },
+          }}
+          isOpen={isOpen}
+          onRequestClose={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          <h1>{fullNews[0].title}</h1>
+          <img
+            src={fullNews[0].urlToImage}
+            alt=""
+            style={{ width: "100%", margin: "40px 0" }}
+          />
+          <p style={{ fontSize: "1.1rem" }}>{fullNews[0].description}</p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              marginTop: "70px",
+            }}
+          >
+            <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
+              {fullNews[0].publishedAt}
+            </p>
+            <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
+              ~ {fullNews[0].author}
+            </p>
+          </div>
+        </Modal>
       </div>
 
       {/* footer */}
