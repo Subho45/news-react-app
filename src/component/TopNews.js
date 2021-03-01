@@ -7,6 +7,7 @@ import SidebarNews from "../component/SidebarNews";
 import Weather from "../component/Weather";
 import Card from "../component/Card";
 import Footer from "./Footer";
+import FullNews from "./FullNews";
 
 // css
 import "../css/TopNews.css";
@@ -207,7 +208,15 @@ const TopNews = () => {
             setIsOpen(!isOpen);
           }}
         >
-          <h1>{fullNews[0].title}</h1>
+          <FullNews
+            heading={fullNews[0].title}
+            img={fullNews[0].urlToImage}
+            description={fullNews[0].description}
+            publish={fullNews[0].publishedAt}
+            author={fullNews[0].author}
+          />
+
+          {/* <h1>{fullNews[0].title}</h1>
           <img
             src={fullNews[0].urlToImage}
             alt=""
@@ -228,7 +237,7 @@ const TopNews = () => {
             <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
               ~ {fullNews[0].author}
             </p>
-          </div>
+          </div> */}
         </Modal>
       </div>
 

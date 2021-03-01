@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import Banner from "./Banner";
 import Card from "./Card";
 import Footer from "./Footer";
+import FullNews from "./FullNews";
 
 // css
 import "../css/App.css";
@@ -108,28 +109,13 @@ const BusinessNews = () => {
             setIsOpen(!isOpen);
           }}
         >
-          <h1>{fullNews[0].title}</h1>
-          <img
-            src={fullNews[0].urlToImage}
-            alt=""
-            style={{ width: "100%", margin: "40px 0" }}
+          <FullNews
+            heading={fullNews[0].title}
+            img={fullNews[0].urlToImage}
+            description={fullNews[0].description}
+            publish={fullNews[0].publishedAt}
+            author={fullNews[0].author}
           />
-          <p style={{ fontSize: "1.1rem" }}>{fullNews[0].description}</p>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "70px",
-            }}
-          >
-            <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
-              {fullNews[0].publishedAt}
-            </p>
-            <p style={{ fontSize: ".9rem", fontWeight: "bold" }}>
-              ~ {fullNews[0].author}
-            </p>
-          </div>
         </Modal>
       </div>
 

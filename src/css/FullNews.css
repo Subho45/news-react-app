@@ -1,0 +1,17 @@
+.full__news > img {
+  width: 100%;
+  margin: 40px 0;
+}
+.full__news > p {
+  font-size: 1.1rem;
+}
+.full__news > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.full__news > div > p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
