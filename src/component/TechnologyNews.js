@@ -26,11 +26,11 @@ const TechnologyNews = () => {
   // full news detail
   const [fullNews, setFullNews] = useState([
     {
-      urlToImage: "",
       title: "",
+      urlToImage: "",
       description: "",
-      author: "",
       publishedAt: "",
+      author: "",
     },
   ]);
 
@@ -53,7 +53,6 @@ const TechnologyNews = () => {
       )
       .then((response) => {
         const fullNewsData = response.data.articles.slice(index, index + 1);
-        console.log(fullNewsData);
         setFullNews(fullNewsData);
       });
     setIsOpen(!isOpen);
