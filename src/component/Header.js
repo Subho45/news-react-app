@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // css
@@ -8,6 +8,9 @@ import "../css/Header.css";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const Header = (props) => {
+  // navbar open or not value
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     // navbar
     <div className="header">
@@ -30,13 +33,16 @@ const Header = (props) => {
       </div>
 
       {/* nav links */}
-      <ul className="nav__list">
+      <ul className={isOpen ? "nav__list nav__list__active" : "nav__list"}>
         <li className="nav__item">
           <NavLink
             exact
             activeClassName="nav__active"
             className="nav__link"
             to="/"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
           >
             Top News
           </NavLink>
@@ -46,6 +52,9 @@ const Header = (props) => {
             activeClassName="nav__active"
             className="nav__link"
             to="/technology"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
           >
             Technology
           </NavLink>
@@ -55,6 +64,9 @@ const Header = (props) => {
             activeClassName="nav__active"
             className="nav__link"
             to="/bussiness"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
           >
             Bussiness
           </NavLink>
@@ -62,7 +74,12 @@ const Header = (props) => {
       </ul>
 
       {/* nav icon */}
-      <div className="nav__icon">
+      <div
+        className="nav__icon"
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
         <MenuIcon />
       </div>
     </div>
