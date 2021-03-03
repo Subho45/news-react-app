@@ -46,3 +46,16 @@
     font-size: 2rem;
   }
 }
+
+/* screen size 768px */
+@media only screen and (max-width: 768px) {
+  /* news section */
+  .news__section__heading {
+    font-size: 1.8rem;
+  }
+
+  /* main news section */
+  .main__news__section {
+    justify-content: space-around;
+  }
+}

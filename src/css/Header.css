@@ -108,4 +108,7 @@
   .nav__list__active {
     left: 0;
   }
+  .logo {
+    font-size: 1.6rem;
+  }
 }

@@ -6,6 +6,7 @@ import "../css/Header.css";
 
 // icon
 import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 const Header = (props) => {
   // navbar open or not value
@@ -80,7 +81,7 @@ const Header = (props) => {
           setIsOpen(!isOpen);
         }}
       >
-        <MenuIcon />
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
       </div>
     </div>
   );

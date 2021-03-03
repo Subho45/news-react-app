@@ -27,3 +27,14 @@
     width: 35%;
   }
 }
+
+/* screen size 768px */
+@media only screen and (max-width: 768px) {
+  .banner__heading {
+    width: 55%;
+    font-size: 2.2rem;
+  }
+  .banner__img {
+    width: 35%;
+  }
+}
