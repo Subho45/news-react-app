@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // component
@@ -11,10 +11,22 @@ import BusinessNews from "./component/BussinessNews";
 import "./css/App.css";
 
 const App = () => {
+  // test
+  const [randomNews, setRandomNews] = useState("");
+
+  const getNewsHandler = (e) => {
+    setRandomNews(e.target.value);
+  };
+  const setNewsHandler = () => {};
+
   return (
     <>
       {/* navbar */}
-      <Header />
+      <Header
+        getNews={getNewsHandler}
+        setNews={setNewsHandler}
+        value={randomNews}
+      />
 
       {/* paths */}
       <Switch>

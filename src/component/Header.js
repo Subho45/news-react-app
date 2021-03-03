@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 // css
 import "../css/Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     // navbar
     <div className="header">
@@ -19,8 +19,11 @@ const Header = () => {
           placeholder="Search news"
           type="text"
           className="search__input"
+          onChange={props.getNews}
         />
-        <button className="search__icon">Search</button>
+        <button className="search__icon" onClick={props.setNews}>
+          Search
+        </button>
       </div>
 
       {/* nav links */}

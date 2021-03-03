@@ -35,3 +35,13 @@
 .weather__detail__section img {
   width: 80px;
 }
+
+/* screen size 1024px */
+@media only screen and (max-width: 1024px) {
+  .weather__detail p:nth-child(1) {
+    font-size: 1.1rem;
+  }
+  .weather__detail p:nth-child(2) {
+    font-size: 2rem;
+  }
+}
