@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 // css
 import "../css/Header.css";
 
+// icon
+import MenuIcon from "@material-ui/icons/Menu";
+
 const Header = (props) => {
   return (
     // navbar
@@ -57,6 +60,11 @@ const Header = (props) => {
           </NavLink>
         </li>
       </ul>
+
+      {/* nav icon */}
+      <div className="nav__icon">
+        <MenuIcon />
+      </div>
     </div>
   );
 };

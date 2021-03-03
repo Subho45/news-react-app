@@ -67,3 +67,37 @@
   color: #000;
   font-weight: bold;
 }
+
+/* nav icon */
+.nav__icon {
+  display: none;
+  margin-left: 50px;
+}
+
+/* screen size 768px */
+@media only screen and (max-width: 768px) {
+  /* nav links */
+  .nav__list {
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+  .nav__item {
+    margin: 35px 0;
+  }
+  .nav__link {
+    font-size: 1.2rem;
+  }
+
+  /* nav icon */
+  .nav__icon {
+    display: block;
+  }
+}
