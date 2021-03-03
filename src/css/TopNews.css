@@ -38,3 +38,27 @@
   font-size: 1.5rem;
   color: #fff;
 }
+
+/* screen size 768px */
+@media only screen and (max-width: 768px) {
+  /* sidebar - weather */
+  .sidebar__weather__section {
+    margin: 8%;
+    flex-direction: column;
+  }
+  .sidebar__news {
+    width: 70%;
+    margin: auto;
+  }
+
+  /* carousel */
+  .carousel {
+    height: 200px;
+  }
+  .carousel__detail > .carousel__link > img {
+    height: 200px;
+  }
+  .carousel__detail > .carousel__link > h1 {
+    font-size: 1.2rem;
+  }
+}

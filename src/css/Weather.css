@@ -38,10 +38,28 @@
 
 /* screen size 1024px */
 @media only screen and (max-width: 1024px) {
+  /* weather detail */
   .weather__detail p:nth-child(1) {
     font-size: 1.1rem;
   }
   .weather__detail p:nth-child(2) {
     font-size: 2rem;
+  }
+}
+
+/* screen size 768px */
+@media only screen and (max-width: 768px) {
+  /* weather section */
+  .weather__section {
+    width: 50%;
+    margin: 70px auto 30px;
+  }
+  /* weather detail */
+  .weather__detail p:nth-child(1) {
+    font-size: 1rem;
+  }
+  .weather__detail p:nth-child(2) {
+    font-size: 1.8rem;
+    margin: 30px 0;
   }
 }

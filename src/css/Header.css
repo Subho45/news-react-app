@@ -77,6 +77,11 @@
 
 /* screen size 768px */
 @media only screen and (max-width: 768px) {
+  /* navbar */
+  .logo {
+    font-size: 1.6rem;
+  }
+
   /* nav links */
   .nav__list {
     position: fixed;
@@ -99,16 +104,13 @@
     font-size: 1.2rem;
   }
 
-  /* nav icon */
-  .nav__icon {
-    display: block;
-  }
-
   /* nav links active */
   .nav__list__active {
     left: 0;
   }
-  .logo {
-    font-size: 1.6rem;
+
+  /* nav icon */
+  .nav__icon {
+    display: block;
   }
 }
