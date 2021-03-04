@@ -85,7 +85,7 @@
   /* nav links */
   .nav__list {
     position: fixed;
-    width: 40%;
+    width: 50%;
     height: 100vh;
     top: 0;
     left: -100%;
@@ -112,5 +112,17 @@
   /* nav icon */
   .nav__icon {
     display: block;
+  }
+}
+
+/* screen size 480px */
+@media only screen and (max-width: 480px) {
+  /* navbar */
+  .header {
+    padding: 30px 40px;
+  }
+  /* serchbar */
+  .search__bar {
+    display: none;
   }
 }

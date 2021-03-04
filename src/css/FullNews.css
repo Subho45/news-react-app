@@ -32,3 +32,23 @@
     font-size: 1rem;
   }
 }
+
+/* screen size 480px */
+@media only screen and (max-width: 480px) {
+  .full__news > h1 {
+    font-size: 1.3rem;
+  }
+  .full__news > p {
+    font-size: 1rem;
+  }
+  .full__news > div {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  .full__news > div > p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+}

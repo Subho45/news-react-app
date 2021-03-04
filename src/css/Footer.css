@@ -17,3 +17,14 @@
   word-spacing: 2px;
   margin-top: 25px;
 }
+
+/* screen size 480px */
+@media only screen and (max-width: 480px) {
+  .footer {
+    padding: 35px 0;
+  }
+  .footer > p {
+    font-size: 0.8rem;
+    margin-top: 15px;
+  }
+}
