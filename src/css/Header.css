@@ -121,8 +121,15 @@
   .header {
     padding: 30px 40px;
   }
+  .logo {
+    font-size: 1.4rem;
+  }
   /* serchbar */
   .search__bar {
     display: none;
+  }
+  /* nav links */
+  .nav__list {
+    width: 70%;
   }
 }

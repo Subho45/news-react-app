@@ -13,3 +13,14 @@
   font-size: 1rem;
   margin-left: 20px;
 }
+
+/* screen size 480px */
+@media only screen and (max-width: 480px) {
+  .sidebar__detail {
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar__detail__heading {
+    font-size: 0.9rem;
+  }
+}

@@ -64,12 +64,21 @@
 @media only screen and (max-width: 480px) {
   /* news section */
   .news__section__heading {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   /* main news section */
   .main__news__section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+
+/* screen size 360px */
+@media only screen and (max-width: 360px) {
+  /* news section */
+  .news__section__heading {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
   }
 }

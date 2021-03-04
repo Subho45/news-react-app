@@ -31,3 +31,14 @@
     width: 75%;
   }
 }
+
+/* screen size 360px */
+@media only screen and (max-width: 360px) {
+  .news__card {
+    width: 90%;
+    margin: 25px 0;
+  }
+  .news__card > .news__detail > h1 {
+    font-size: 1.1rem;
+  }
+}
