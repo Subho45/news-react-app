@@ -39,6 +39,17 @@
   justify-content: space-evenly;
 }
 
+/* full news modal */
+.modal__overlay {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 /* screen size 1024px */
 @media only screen and (max-width: 1024px) {
   /* news section */

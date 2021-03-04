@@ -89,11 +89,8 @@ const TechnologyNews = () => {
 
         {/* full news modal */}
         <Modal
+          overlayClassName="modal__overlay"
           style={{
-            overlay: {
-              zIndex: "1",
-              backgroundColor: "rgba(0,0,0,0.5)",
-            },
             content: {
               top: "50%",
               left: "50%",

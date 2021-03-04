@@ -133,3 +133,11 @@
     width: 70%;
   }
 }
+
+/* screen size 480px */
+@media only screen and (max-width: 480px) {
+  /* navbar */
+  .header {
+    padding: 30px;
+  }
+}
