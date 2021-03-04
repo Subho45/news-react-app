@@ -13,7 +13,6 @@ import "./css/App.css";
 const App = () => {
   // test
   const [randomNews, setRandomNews] = useState("");
-
   const getNewsHandler = (e) => {
     setRandomNews(e.target.value);
   };
