@@ -89,17 +89,8 @@ const TechnologyNews = () => {
 
         {/* full news modal */}
         <Modal
+          className="modal__content"
           overlayClassName="modal__overlay"
-          style={{
-            content: {
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%,-50%)",
-              padding: "50px",
-              width: "70%",
-              height: "90%",
-            },
-          }}
           isOpen={isOpen}
           onRequestClose={() => {
             setIsOpen(!isOpen);
