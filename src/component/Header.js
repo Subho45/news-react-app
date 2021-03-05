@@ -28,7 +28,7 @@ const Header = (props) => {
           className="search__input"
           onChange={props.getNews}
         />
-        <button className="search__icon" onClick={props.setNews}>
+        <button className="search__icon" onClick={props.showNews}>
           Search
         </button>
       </div>
