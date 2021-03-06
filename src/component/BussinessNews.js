@@ -95,6 +95,7 @@ const BusinessNews = () => {
           onRequestClose={() => {
             setIsOpen(!isOpen);
           }}
+          ariaHideApp={false}
         >
           <FullNews
             heading={fullNews[0].title}
