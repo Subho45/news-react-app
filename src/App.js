@@ -15,14 +15,10 @@ import axios from "axios";
 
 const App = () => {
   // test
-  const [randomNews, setRandomNews] = useState("");
-  const getNewsHandler = (e) => {
-    setRandomNews(e.target.value);
-  };
-  const showNewsHandler = () => {
+  const showNewsHandler = (e) => {
     axios
       .get(
-        `http://newsapi.org/v2/everything?q=${randomNews}&apiKey=2a2f7c81bb17454e99c1299ee2052e23`
+        `http://newsapi.org/v2/everything?q=${e.target.value}&apiKey=2a2f7c81bb17454e99c1299ee2052e23`
       )
       .then((response) => {
         console.log(response.data.articles);
@@ -32,11 +28,7 @@ const App = () => {
   return (
     <>
       {/* navbar */}
-      <Header
-        getNews={getNewsHandler}
-        showNews={showNewsHandler}
-        value={randomNews}
-      />
+      <Header showNews={showNewsHandler} />
 
       {/* paths */}
       <Switch>

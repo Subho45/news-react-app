@@ -26,11 +26,8 @@ const Header = (props) => {
           placeholder="Search news"
           type="text"
           className="search__input"
-          onChange={props.getNews}
+          onChange={props.showNews}
         />
-        <button className="search__icon" onClick={props.showNews}>
-          Search
-        </button>
       </div>
 
       {/* nav links */}
