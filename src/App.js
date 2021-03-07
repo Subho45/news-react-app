@@ -14,14 +14,17 @@ import "./css/App.css";
 import axios from "axios";
 
 const App = () => {
-  // test
+  // search news result detail
+  const [searchResult, setSearchResult] = useState([]);
+
+  // search news result functionality
   const showNewsHandler = (e) => {
     axios
       .get(
         `http://newsapi.org/v2/everything?q=${e.target.value}&apiKey=2a2f7c81bb17454e99c1299ee2052e23`
       )
       .then((response) => {
-        console.log(response.data.articles);
+        setSearchResult(response.data.articles.slice(0, 5));
       });
   };
 
@@ -29,6 +32,19 @@ const App = () => {
     <>
       {/* navbar */}
       <Header showNews={showNewsHandler} />
+
+      {/* display search news result */}
+      {searchResult.length !== 0 ? (
+        <div className="search__result">
+          {searchResult.map((eachResult, eachResultIndex) => {
+            return (
+              <a href={eachResult.url} key={eachResultIndex}>
+                {eachResult.title}
+              </a>
+            );
+          })}
+        </div>
+      ) : null}
 
       {/* paths */}
       <Switch>

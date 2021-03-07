@@ -2,6 +2,8 @@
   display: flex;
   padding: 15px 0;
   border-bottom: 1px solid #cccccc;
+  align-items: center;
+  justify-content: center;
 }
 .sidebar__detail__img {
   width: auto;
@@ -16,10 +18,6 @@
 
 /* screen size 480px */
 @media only screen and (max-width: 480px) {
-  .sidebar__detail {
-    align-items: center;
-    justify-content: center;
-  }
   .sidebar__detail__heading {
     font-size: 0.9rem;
   }
