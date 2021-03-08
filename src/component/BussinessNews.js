@@ -38,7 +38,7 @@ const BusinessNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=3081ea8510f14c59804b8fde69422151"
       )
       .then((response) => {
         setBusinessNews(response.data.articles);
@@ -49,7 +49,7 @@ const BusinessNews = () => {
   const fullNewsHandler = (index) => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
+        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=3081ea8510f14c59804b8fde69422151"
       )
       .then((response) => {
         const fullNewsData = response.data.articles.slice(index, index + 1);

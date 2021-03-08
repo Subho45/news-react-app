@@ -21,7 +21,7 @@ const App = () => {
   const showNewsHandler = (e) => {
     axios
       .get(
-        `http://newsapi.org/v2/everything?q=${e.target.value}&apiKey=2a2f7c81bb17454e99c1299ee2052e23`
+        `http://newsapi.org/v2/everything?q=${e.target.value}&apiKey=3081ea8510f14c59804b8fde69422151`
       )
       .then((response) => {
         setSearchResult(response.data.articles.slice(0, 5));
@@ -58,3 +58,8 @@ const App = () => {
 };
 
 export default App;
+
+// gmail api key
+// 2a2f7c81bb17454e99c1299ee2052e23
+// hotmail api key
+// 3081ea8510f14c59804b8fde69422151
