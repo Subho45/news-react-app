@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // component
@@ -10,41 +10,11 @@ import BusinessNews from "./component/BussinessNews";
 // css
 import "./css/App.css";
 
-// others
-import axios from "axios";
-
 const App = () => {
-  // search news result detail
-  const [searchResult, setSearchResult] = useState([]);
-
-  // search news result functionality
-  const showNewsHandler = (e) => {
-    axios
-      .get(
-        `http://newsapi.org/v2/everything?q=${e.target.value}&apiKey=3081ea8510f14c59804b8fde69422151`
-      )
-      .then((response) => {
-        setSearchResult(response.data.articles.slice(0, 5));
-      });
-  };
-
   return (
     <>
       {/* navbar */}
-      <Header showNews={showNewsHandler} />
-
-      {/* display search news result */}
-      {searchResult.length !== 0 ? (
-        <div className="search__result">
-          {searchResult.map((eachResult, eachResultIndex) => {
-            return (
-              <a href={eachResult.url} key={eachResultIndex}>
-                {eachResult.title}
-              </a>
-            );
-          })}
-        </div>
-      ) : null}
+      <Header />
 
       {/* paths */}
       <Switch>
@@ -63,3 +33,5 @@ export default App;
 // 2a2f7c81bb17454e99c1299ee2052e23
 // hotmail api key
 // 3081ea8510f14c59804b8fde69422151
+// tanmay api key
+// 26ba0fab82064367bf3c90626f468125

@@ -24,7 +24,7 @@
   font-weight: bold;
 }
 .weather__detail p:nth-child(2) {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: bold;
   margin: 25px 0 40px;
   width: 50%;
@@ -68,7 +68,7 @@
 @media only screen and (max-width: 480px) {
   /* weather section */
   .weather__section {
-    width: 90%;
+    width: 75%;
     margin: 70px 0 30px;
   }
   .weather__heading {
@@ -78,5 +78,14 @@
   .weather__detail p:nth-child(2) {
     font-size: 1.6rem;
     margin: 25px 0;
+  }
+}
+
+/* screen size 360px */
+@media only screen and (max-width: 360px) {
+  /* weather section */
+  .weather__section {
+    width: 90%;
+    margin: 70px 0 30px;
   }
 }

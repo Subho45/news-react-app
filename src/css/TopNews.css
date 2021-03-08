@@ -72,8 +72,8 @@
     margin: 0;
   }
   .sidebar__news__heading {
-    font-size: 1.2rem;
-    margin: 20px 0;
+    font-size: 1.3rem;
+    margin: 20px 0 30px;
   }
   /* carousel */
   .carousel {
@@ -91,6 +91,14 @@
 
 /* screen size 360px */
 @media only screen and (max-width: 360px) {
+  /* sidebar - weather */
+  .sidebar__news {
+    width: 100%;
+  }
+  .sidebar__news__heading {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
   /* carousel */
   .carousel {
     width: 100%;
