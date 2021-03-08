@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/news-react-app/static/css/main.783baa03.chunk.css",
-    "main.js": "/news-react-app/static/js/main.1fbeb726.chunk.js",
-    "main.js.map": "/news-react-app/static/js/main.1fbeb726.chunk.js.map",
+    "main.css": "/news-react-app/static/css/main.66d8e631.chunk.css",
+    "main.js": "/news-react-app/static/js/main.9910d991.chunk.js",
+    "main.js.map": "/news-react-app/static/js/main.9910d991.chunk.js.map",
     "runtime-main.js": "/news-react-app/static/js/runtime-main.5211c2ab.js",
     "runtime-main.js.map": "/news-react-app/static/js/runtime-main.5211c2ab.js.map",
     "static/css/2.e9f7250c.chunk.css": "/news-react-app/static/css/2.e9f7250c.chunk.css",
-    "static/js/2.216d3148.chunk.js": "/news-react-app/static/js/2.216d3148.chunk.js",
-    "static/js/2.216d3148.chunk.js.map": "/news-react-app/static/js/2.216d3148.chunk.js.map",
+    "static/js/2.868fb94e.chunk.js": "/news-react-app/static/js/2.868fb94e.chunk.js",
+    "static/js/2.868fb94e.chunk.js.map": "/news-react-app/static/js/2.868fb94e.chunk.js.map",
     "index.html": "/news-react-app/index.html",
     "static/css/2.e9f7250c.chunk.css.map": "/news-react-app/static/css/2.e9f7250c.chunk.css.map",
-    "static/css/main.783baa03.chunk.css.map": "/news-react-app/static/css/main.783baa03.chunk.css.map",
-    "static/js/2.216d3148.chunk.js.LICENSE.txt": "/news-react-app/static/js/2.216d3148.chunk.js.LICENSE.txt",
+    "static/css/main.66d8e631.chunk.css.map": "/news-react-app/static/css/main.66d8e631.chunk.css.map",
+    "static/js/2.868fb94e.chunk.js.LICENSE.txt": "/news-react-app/static/js/2.868fb94e.chunk.js.LICENSE.txt",
     "static/media/businessBanner.974eb650.svg": "/news-react-app/static/media/businessBanner.974eb650.svg",
     "static/media/technologyBanner.963ca765.svg": "/news-react-app/static/media/technologyBanner.963ca765.svg",
     "static/media/topBanner.0d270e1b.svg": "/news-react-app/static/media/topBanner.0d270e1b.svg"
@@ -19,8 +19,8 @@
   "entrypoints": [
     "static/js/runtime-main.5211c2ab.js",
     "static/css/2.e9f7250c.chunk.css",
-    "static/js/2.216d3148.chunk.js",
-    "static/css/main.783baa03.chunk.css",
-    "static/js/main.1fbeb726.chunk.js"
+    "static/js/2.868fb94e.chunk.js",
+    "static/css/main.66d8e631.chunk.css",
+    "static/js/main.9910d991.chunk.js"
   ]
 }
