@@ -57,7 +57,7 @@ const TopNews = () => {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=26ba0fab82064367bf3c90626f468125"
+        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
         setSidebarNewsDetail(response.data.articles);
@@ -95,7 +95,7 @@ const TopNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=us&apiKey=26ba0fab82064367bf3c90626f468125"
+        "http://newsapi.org/v2/top-headlines?country=us&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
         const carouselData = response.data.articles.slice(0, 5);
@@ -119,7 +119,7 @@ const TopNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&apiKey=26ba0fab82064367bf3c90626f468125"
+        "http://newsapi.org/v2/top-headlines?country=in&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
         setTopNews(response.data.articles);
@@ -130,7 +130,7 @@ const TopNews = () => {
   const fullNewsHandler = (index) => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&apiKey=26ba0fab82064367bf3c90626f468125"
+        "http://newsapi.org/v2/top-headlines?country=in&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
         const fullNewsData = response.data.articles.slice(index, index + 1);

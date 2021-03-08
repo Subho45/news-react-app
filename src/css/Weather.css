@@ -1,6 +1,6 @@
 /* weather section */
 .weather__section {
-  width: 30%;
+  width: 25%;
   border: 2px solid;
 }
 .weather__heading {
@@ -38,6 +38,10 @@
 
 /* screen size 1024px */
 @media only screen and (max-width: 1024px) {
+  /* weather section */
+  .weather__section {
+    width: 30%;
+  }
   /* weather detail */
   .weather__detail p:nth-child(1) {
     font-size: 1.1rem;

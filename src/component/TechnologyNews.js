@@ -38,7 +38,7 @@ const TechnologyNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=26ba0fab82064367bf3c90626f468125"
+        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
         setTechnologyNews(response.data.articles);
@@ -49,7 +49,7 @@ const TechnologyNews = () => {
   const fullNewsHandler = (index) => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=26ba0fab82064367bf3c90626f468125"
+        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=2a2f7c81bb17454e99c1299ee2052e23"
       )
       .then((response) => {
         const fullNewsData = response.data.articles.slice(index, index + 1);
