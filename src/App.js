@@ -33,5 +33,5 @@ export default App;
 // 2a2f7c81bb17454e99c1299ee2052e23
 // hotmail api key
 // 3081ea8510f14c59804b8fde69422151
-// tanmay api key
+// tanmay hotmail api key
 // 26ba0fab82064367bf3c90626f468125
