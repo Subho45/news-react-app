@@ -65,6 +65,30 @@
   right: 0;
 }
 
+/* test */
+.search__result {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.search__result > a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: #000;
+  padding: 15px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.search__result > a:last-child {
+  border-bottom: none;
+}
+
 /* screen size 1024px */
 @media only screen and (max-width: 1024px) {
   /* news section */

@@ -6,6 +6,8 @@
   width: 100%;
   padding: 40px 8%;
 }
+
+/* logo */
 .logo {
   font-family: "Playfair Display", serif;
   color: #000;
@@ -15,13 +17,26 @@
   margin-right: 50px;
 }
 
+/* search bar */
+.header > input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  background-color: #eeeeee;
+  font-size: 1rem;
+}
+.header > input::placeholder {
+  font-size: 0.9rem;
+}
+
 /* nav links */
 .nav__list {
   display: flex;
 }
 .nav__item {
   list-style: none;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 .nav__link {
   color: gray;
@@ -84,11 +99,12 @@
 
 /* screen size 480px */
 @media only screen and (max-width: 480px) {
+  /* logo */
   .logo {
     font-size: 1.5rem;
   }
   /* serchbar */
-  .search__bar {
+  .header > input {
     display: none;
   }
   /* nav links */
