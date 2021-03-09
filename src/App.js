@@ -63,7 +63,7 @@ const App = () => {
 
 export default App;
 
-// news api
+// news api for all
 // gmail api key
 // 2a2f7c81bb17454e99c1299ee2052e23 (using)
 // hotmail api key
@@ -71,7 +71,7 @@ export default App;
 // tanmay hotmail api key
 // 26ba0fab82064367bf3c90626f468125
 
-// mediastack
+// mediastack for search
 // gmail api key
 // 55d8a7648c98222928186dcac0ae1c19 (using)
 // hotmail api key
