@@ -14,9 +14,13 @@ import "./css/App.css";
 import axios from "axios";
 
 const App = () => {
-  // test
+  // search news detail
   const [searchNews, setSearchNews] = useState([]);
+
+  // search input value
   const [searchValue, setSearchValue] = useState("");
+
+  // search news data fetch
   const showNewsHandler = (e) => {
     setSearchValue(e.target.value);
     axios
@@ -33,7 +37,7 @@ const App = () => {
       {/* navbar */}
       <Header showNews={showNewsHandler} />
 
-      {/* test */}
+      {/* search news section */}
       {searchValue !== "" ? (
         <div className="search__result">
           {searchNews.map((eachNews, eachNewsIndex) => {
