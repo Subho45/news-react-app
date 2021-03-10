@@ -19,12 +19,12 @@
 
 /* screen size 1024px */
 @media only screen and (max-width: 1024px) {
+  .full__news > h1 {
+    font-size: 1.8rem;
+  }
   .full__news > img {
     margin: 60px 0;
     width: 100%;
-  }
-  .full__news > h1 {
-    font-size: 1.8rem;
   }
 }
 
@@ -43,11 +43,11 @@
 
 /* screen size 480px */
 @media only screen and (max-width: 480px) {
-  .full__news > img {
-    margin: 40px 0;
-  }
   .full__news > h1 {
     font-size: 1.3rem;
+  }
+  .full__news > img {
+    margin: 40px 0;
   }
   .full__news > p {
     font-size: 1rem;
