@@ -1,6 +1,7 @@
 .full__news > img {
-  width: 100%;
-  margin: 60px 0;
+  width: 70%;
+  margin: 70px auto;
+  display: block;
 }
 .full__news > p {
   font-size: 1.1rem;
@@ -18,6 +19,10 @@
 
 /* screen size 1024px */
 @media only screen and (max-width: 1024px) {
+  .full__news > img {
+    margin: 60px 0;
+    width: 100%;
+  }
   .full__news > h1 {
     font-size: 1.8rem;
   }
