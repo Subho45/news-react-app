@@ -73,6 +73,6 @@ export default App;
 
 // mediastack for search
 // gmail api key
-// 55d8a7648c98222928186dcac0ae1c19 (using)
+// 55d8a7648c98222928186dcac0ae1c19 (using)...
 // hotmail api key
 // 4a67daf24e149973101bca6e4bf17184
