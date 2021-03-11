@@ -86,7 +86,7 @@ const TopNews = () => {
           name: response.data.name,
           temp: `${response.data.main.temp}° celsius`,
           description: response.data.weather[0].description,
-          icon: `http://openweathermap.org/img/w/${response.data.weather[0].icon}.png`,
+          icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
         });
       });
   }, []);
