@@ -25,7 +25,7 @@ const App = () => {
     setSearchValue(e.target.value);
     axios
       .get(
-        `http://api.mediastack.com/v1/news?access_key=55d8a7648c98222928186dcac0ae1c19&languages=en&limit=5&keywords=${e.target.value}`
+        `http://api.mediastack.com/v1/news?access_key=4a67daf24e149973101bca6e4bf17184&languages=en&limit=5&keywords=${e.target.value}`
       )
       .then((response) => {
         setSearchNews(response.data.data);
@@ -65,14 +65,14 @@ export default App;
 
 // news api for all
 // gmail api key
-// 2a2f7c81bb17454e99c1299ee2052e23 (using)
+// 2a2f7c81bb17454e99c1299ee2052e23
 // hotmail api key
-// 3081ea8510f14c59804b8fde69422151
+// 3081ea8510f14c59804b8fde69422151 (using)
 // tanmay hotmail api key
 // 26ba0fab82064367bf3c90626f468125
 
 // mediastack for search
 // gmail api key
-// 55d8a7648c98222928186dcac0ae1c19 (using)
+// 55d8a7648c98222928186dcac0ae1c19
 // hotmail api key
-// 4a67daf24e149973101bca6e4bf17184
+// 4a67daf24e149973101bca6e4bf17184 (using)
