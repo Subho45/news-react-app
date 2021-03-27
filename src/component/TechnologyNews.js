@@ -38,10 +38,10 @@ const TechnologyNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=3081ea8510f14c59804b8fde69422151"
+        "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=317ppBXJwOyxCLAWOCvzKUzivzqRnqaE"
       )
       .then((response) => {
-        setTechnologyNews(response.data.articles);
+        setTechnologyNews(response.data.results);
       });
   }, []);
 
@@ -63,7 +63,7 @@ const TechnologyNews = () => {
     return (
       <Card
         fullNews={fullNewsHandler.bind(this, eachNewsIndex)}
-        img={eachNews.urlToImage}
+        img={eachNews.multimedia[0].url}
         heading={eachNews.title}
         key={eachNewsIndex}
       />
