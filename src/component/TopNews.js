@@ -46,10 +46,10 @@ const TopNews = () => {
   const [fullNews, setFullNews] = useState([
     {
       title: "",
-      urlToImage: "",
-      description: "",
-      publishedAt: "",
-      author: "",
+      multimedia: [{ url: "" }],
+      abstract: "",
+      published_date: "",
+      byline: "",
     },
   ]);
 
@@ -57,10 +57,10 @@ const TopNews = () => {
   useEffect(() => {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=3081ea8510f14c59804b8fde69422151"
+        "https://api.nytimes.com/svc/topstories/v2/insider.json?api-key=317ppBXJwOyxCLAWOCvzKUzivzqRnqaE"
       )
       .then((response) => {
-        setSidebarNewsDetail(response.data.articles);
+        setSidebarNewsDetail(response.data.results.slice(0, 10));
       });
   }, []);
 
@@ -68,8 +68,8 @@ const TopNews = () => {
   const allSidebarNews = sidebarNewsDetail.map((eachNews, eachNewsIndex) => {
     return (
       <SidebarNews
-        bbcImg={eachNews.urlToImage}
-        bbcHeading={eachNews.title}
+        img={eachNews.multimedia[0].url}
+        heading={eachNews.title}
         key={eachNewsIndex}
       />
     );
@@ -95,10 +95,10 @@ const TopNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=us&apiKey=3081ea8510f14c59804b8fde69422151"
+        "https://api.nytimes.com/svc/topstories/v2/us.json?api-key=317ppBXJwOyxCLAWOCvzKUzivzqRnqaE"
       )
       .then((response) => {
-        const carouselData = response.data.articles.slice(0, 5);
+        const carouselData = response.data.results.slice(0, 5);
         setCarouselNewsDetail(carouselData);
       });
   }, []);
@@ -108,7 +108,7 @@ const TopNews = () => {
     return (
       <SplideSlide className="carousel__detail" key={eachNewsIndex}>
         <div className="carousel__link">
-          <img src={eachNews.urlToImage} alt="" />
+          <img src={eachNews.multimedia[0].url} alt="" />
           <h1>{eachNews.title}</h1>
         </div>
       </SplideSlide>
@@ -119,10 +119,10 @@ const TopNews = () => {
   useEffect(() => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&apiKey=3081ea8510f14c59804b8fde69422151"
+        "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=317ppBXJwOyxCLAWOCvzKUzivzqRnqaE"
       )
       .then((response) => {
-        setTopNews(response.data.articles);
+        setTopNews(response.data.results);
       });
   }, []);
 
@@ -130,10 +130,10 @@ const TopNews = () => {
   const fullNewsHandler = (index) => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&apiKey=3081ea8510f14c59804b8fde69422151"
+        "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=317ppBXJwOyxCLAWOCvzKUzivzqRnqaE"
       )
       .then((response) => {
-        const fullNewsData = response.data.articles.slice(index, index + 1);
+        const fullNewsData = response.data.results.slice(index, index + 1);
         setFullNews(fullNewsData);
       });
     setIsOpen(!isOpen);
@@ -144,7 +144,7 @@ const TopNews = () => {
     return (
       <Card
         fullNews={fullNewsHandler.bind(this, eachNewsIndex)}
-        img={eachNews.urlToImage}
+        img={eachNews.multimedia[0].url}
         heading={eachNews.title}
         key={eachNewsIndex}
       />
@@ -162,7 +162,7 @@ const TopNews = () => {
         <div className="sidebar__weather__section">
           {/* sidebar news */}
           <div className="sidebar__news">
-            <h1 className="sidebar__news__heading">BBC Shorts:</h1>
+            <h1 className="sidebar__news__heading">Insider Shorts:</h1>
             {allSidebarNews}
           </div>
 
@@ -198,10 +198,10 @@ const TopNews = () => {
         >
           <FullNews
             heading={fullNews[0].title}
-            img={fullNews[0].urlToImage}
-            description={fullNews[0].description}
-            publish={fullNews[0].publishedAt}
-            author={fullNews[0].author}
+            img={fullNews[0].multimedia[0].url}
+            description={fullNews[0].abstract}
+            publish={fullNews[0].published_date}
+            author={fullNews[0].byline}
           />
         </Modal>
       </div>

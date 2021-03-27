@@ -20,9 +20,6 @@ const Header = (props) => {
         TechNews
       </NavLink>
 
-      {/* search bar */}
-      <input type="text" placeholder="Search news" onChange={props.showNews} />
-
       {/* nav links */}
       <ul className={isOpen ? "nav__list nav__list__active" : "nav__list"}>
         <li className="nav__item">

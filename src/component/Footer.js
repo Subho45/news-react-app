@@ -22,7 +22,7 @@ const Footer = () => {
           <LinkedInIcon fontSize="small" />
         </a>
       </div>
-      <p>© Copyright TechNews | All Rights Reserved.</p>
+      <p>CopyRight © TechNews | All Rights Reserved.</p>
     </div>
   );
 };

@@ -28,6 +28,7 @@
   height: 250px;
   object-fit: cover;
   object-position: center 30%;
+  filter: grayscale(100%);
 }
 .carousel__detail > .carousel__link > h1 {
   position: absolute;
@@ -37,6 +38,7 @@
   width: 70%;
   font-size: 1.5rem;
   color: #fff;
+  text-align: center;
 }
 
 /* screen size 768px */

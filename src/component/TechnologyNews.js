@@ -27,10 +27,10 @@ const TechnologyNews = () => {
   const [fullNews, setFullNews] = useState([
     {
       title: "",
-      urlToImage: "",
-      description: "",
-      publishedAt: "",
-      author: "",
+      multimedia: [{ url: "" }],
+      abstract: "",
+      published_date: "",
+      byline: "",
     },
   ]);
 
@@ -49,10 +49,10 @@ const TechnologyNews = () => {
   const fullNewsHandler = (index) => {
     axios
       .get(
-        "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=3081ea8510f14c59804b8fde69422151"
+        "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=317ppBXJwOyxCLAWOCvzKUzivzqRnqaE"
       )
       .then((response) => {
-        const fullNewsData = response.data.articles.slice(index, index + 1);
+        const fullNewsData = response.data.results.slice(index, index + 1);
         setFullNews(fullNewsData);
       });
     setIsOpen(!isOpen);
@@ -99,10 +99,10 @@ const TechnologyNews = () => {
         >
           <FullNews
             heading={fullNews[0].title}
-            img={fullNews[0].urlToImage}
-            description={fullNews[0].description}
-            publish={fullNews[0].publishedAt}
-            author={fullNews[0].author}
+            img={fullNews[0].multimedia[0].url}
+            description={fullNews[0].abstract}
+            publish={fullNews[0].published_date}
+            author={fullNews[0].byline}
           />
         </Modal>
       </div>

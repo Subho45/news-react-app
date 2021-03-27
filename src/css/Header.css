@@ -17,26 +17,13 @@
   margin-right: 50px;
 }
 
-/* search bar */
-.header > input {
-  flex: 1;
-  padding: 12px 15px;
-  border: none;
-  outline: none;
-  background-color: #eeeeee;
-  font-size: 1rem;
-}
-.header > input::placeholder {
-  font-size: 0.9rem;
-}
-
 /* nav links */
 .nav__list {
   display: flex;
 }
 .nav__item {
   list-style: none;
-  margin-left: 50px;
+  margin-left: 80px;
 }
 .nav__link {
   color: gray;
@@ -103,10 +90,7 @@
   .logo {
     font-size: 1.5rem;
   }
-  /* serchbar */
-  .header > input {
-    display: none;
-  }
+
   /* nav links */
   .nav__list {
     width: 70%;
