@@ -3,7 +3,7 @@ import React from "react";
 // css
 import "../css/Banner.css";
 
-const Banner = (props) => {
+const  Banner = (props) => {
   return (
     <div className="banner">
       <h1 className="banner__heading">{props.bannerHeading}</h1>
